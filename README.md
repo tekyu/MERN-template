@@ -9,6 +9,7 @@
 * Dotenv
 * Socket.io
 * Axios
+* Formik
 
 ### Changing aliases
 Currently there are couple of aliases baked in, such as
@@ -33,6 +34,9 @@ Project contains following babel plugins
 * babel-plugin-styled-components
 
 __ESLint__ is used with airbnb config with additional rules
+
+__Formatting on save__ is used inside project
+
 
 
 
