@@ -28,11 +28,14 @@ To change aliases them you need to change
 * `config-overrides.js` - for letting __webpack__ know the imports
 
 Project contains following babel plugins
-* @babel/plugin-proposal-export-namespace-from,
-* @babel/plugin-proposal-nullish-coalescing-operator,
-* @babel/plugin-proposal-optional-chaining,
-* babel-plugin-styled-components
-
+```
+"plugins": [
+  "@babel/plugin-proposal-export-namespace-from",
+  "@babel/plugin-proposal-nullish-coalescing-operator",
+  "@babel/plugin-proposal-optional-chaining",
+  "babel-plugin-styled-components"
+]
+```
 __ESLint__ is used with airbnb config with additional rules
 
 __Formatting on save__ is used inside project
