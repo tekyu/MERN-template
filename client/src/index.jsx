@@ -16,8 +16,9 @@ const history = createBrowserHistory();
 const app = (
   <Provider store={store}>
     <BrowserRouter history={history}>
-      <Suspense fallback={<FullScreenLoader/>}
-      <App />
+      <Suspense fallback={<FullScreenLoader />}>
+        <App />
+      </Suspense>
     </BrowserRouter>
   </Provider>
 );
