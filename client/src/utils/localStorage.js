@@ -1,7 +1,8 @@
+/* eslint-disable */
 function storageAvailable() {
   try {
-    var storage = window["localStorage"],
-      x = "__storage_test__";
+    var storage = window.localStorage;
+    const x = `__storage_test__`;
     storage.setItem(x, x);
     storage.removeItem(x);
     return true;
@@ -14,9 +15,9 @@ function storageAvailable() {
         e.code === 1014 ||
         // test name field too, because code might not be present
         // everything except Firefox
-        e.name === "QuotaExceededError" ||
+        e.name === `QuotaExceededError` ||
         // Firefox
-        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+        e.name === `NS_ERROR_DOM_QUOTA_REACHED`) &&
       // acknowledge QuotaExceededError only if there's something already stored
       storage &&
       storage.length !== 0
@@ -26,7 +27,7 @@ function storageAvailable() {
 
 export const getStorage = () => storageAvailable() && window.localStorage;
 
-export const getItemFromStorage = key => {
+export const getItemFromStorage = (key) => {
   const value = getStorage().getItem(key);
   try {
     return JSON.parse(value);
@@ -43,6 +44,6 @@ export const clearStorage = () => {
   getStorage().clear();
 };
 
-export const removeItemFromStorage = key => {
+export const removeItemFromStorage = (key) => {
   getStorage().removeItem(key);
 };

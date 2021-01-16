@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import { user } from "store/user/userSelectors";
 import { getItemFromStorage } from "utils/localStorage";
 
@@ -10,22 +11,16 @@ export const PLAYWIN_TEMPLATE_KEYS = `playwintemplatekeys`;
 
 export const getUser = getItemFromStorage(USER) || {};
 
-export const getUserId = () => {
-  return user.id || null;
-};
+export const getUserId = () => user.id || null;
 
 export const getCreatedTemplates = getItemFromStorage(CREATED_TEMPLATES) || [];
 
 export const getDraftTemplates = getItemFromStorage(DRAFT_TEMPLATES) || {};
 
-export const getDraftLeagues = () => {
-  return Object.values(getDraftTemplates).filter(
-    ({ type }) => type === TEMPLATE_TYPE_LEAGUE
-  );
-};
+export const getDraftLeagues = () => Object.values(getDraftTemplates).filter(
+  ({ type }) => type === TEMPLATE_TYPE_LEAGUE,
+);
 
-export const getDraftTournaments = () => {
-  return Object.values(getDraftTemplates).filter(
-    ({ type }) => type === TEMPLATE_TYPE_TOURNAMENT
-  );
-};
+export const getDraftTournaments = () => Object.values(getDraftTemplates).filter(
+  ({ type }) => type === TEMPLATE_TYPE_TOURNAMENT,
+);

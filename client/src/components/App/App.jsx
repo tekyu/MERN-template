@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   flex-direction: column;
 `;
 
-const App = ({ modalType, error }) => {
+const App = ({ modalType, error }) => (
   // const isAuth = useSelector(auth);
   // const dispatch = useDispatch();
   // if (isAuth) {
@@ -24,21 +24,23 @@ const App = ({ modalType, error }) => {
   //   // userActions.checkAuth();
   // }, []);
 
-  return (
-    <StyledContainer>
-      <StylesProvider injectFirst>
-        {/* <ThemeProvider theme={Theme}> */}
-        <Content auth={auth} />
-        <ToastContainer />
-        {/* </ThemeProvider> */}
-      </StylesProvider>
-    </StyledContainer>
-  );
-};
-
+  <StyledContainer>
+    <StylesProvider injectFirst>
+      {/* <ThemeProvider theme={Theme}> */}
+      <Content auth={auth} />
+      <ToastContainer />
+      {/* </ThemeProvider> */}
+    </StylesProvider>
+  </StyledContainer>
+);
 App.propTypes = {
   modalType: PropTypes.string,
-  error: PropTypes.string
+  error: PropTypes.string,
 };
+
+App.defaultProps = {
+  modalType: null,
+  error: null,
+}
 
 export default App;
