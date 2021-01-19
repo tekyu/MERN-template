@@ -12,7 +12,7 @@ export const updatePlayer = user => ({
 export const createAnonUser = () => {
   const userFromLS = getItemFromStorage(USER);
   console.log(
-    "createAnonUser",
+    `createAnonUser`,
     userFromLS,
     userFromLS && userFromLS.id,
     nanoid()

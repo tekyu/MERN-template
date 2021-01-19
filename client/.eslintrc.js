@@ -5,17 +5,13 @@ module.exports = {
     node: true,
     jest: true,
   },
-  // plugins: [`jsx-a11y`, `prettier`, `react`, `react-hooks`],
   plugins: [`jsx-a11y`, `prettier`, `react`, `react-hooks`],
   extends: [
-    // `eslint:recommended`,
     `airbnb`,
     `plugin:react/recommended`,
     `plugin:jsx-a11y/recommended`,
     `plugin:react-hooks/recommended`,
     `prettier`,
-    // "prettier/react",
-    // "plugin:prettier/recommended"
   ],
   parser: `babel-eslint`,
   parserOptions: {
@@ -28,13 +24,7 @@ module.exports = {
     "no-unused-vars": 1,
     "no-console": 1,
     "no-shadow": 0,
-    "arrow-parens": ["as-needed", { requireForBlockBody: true }],
-    // "prettier/prettier": [
-    //   2,
-    //   {
-    //     endOfLine: "auto"
-    //   }
-    // ],
+    "arrow-parens": [2, `as-needed`],
     "jsx-a11y/label-has-for": [
       0,
       {
@@ -54,13 +44,23 @@ module.exports = {
       `error`,
       { props: true, ignorePropertyModificationsFor: [`draft`] },
     ],
+    "react/jsx-filename-extension": [
+      2,
+      { extensions: [`.js`, `.jsx`, `.ts`, `.tsx`] },
+    ],
+    "import/extensions": [
+      `error`,
+      `ignorePackages`,
+      {
+        "js": `never`,
+        "jsx": `never`,
+        "ts": `never`,
+        "tsx": `never`
+      }
+   ]
   },
   settings: {
     "import/resolver": {
-      // node: {
-      //   extensions: [".js", ".jsx"],
-      //   paths: "src"
-      // },
       alias: {
         map: [
           [`root`, `./src`],
@@ -73,7 +73,7 @@ module.exports = {
           [`i18n`, `./src/i18n`],
           [`mocks`, `./src/mocks`],
         ],
-        extensions: [`.ts`, `.js`, `.jsx`, `.json`],
+        extensions: [`.ts`, `.tsx`, `.js`, `.jsx`, `.json`],
       },
     },
   },

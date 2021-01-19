@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import "./assets/css/reset.css";
 import "./assets/css/index.scss";
 import store from "store/store";
@@ -15,11 +15,11 @@ const history = createBrowserHistory();
 
 const app = (
   <Provider store={store}>
-    <BrowserRouter history={history}>
+    <Router history={history}>
       <Suspense fallback={<FullScreenLoader />}>
         <App />
       </Suspense>
-    </BrowserRouter>
+    </Router>
   </Provider>
 );
 ReactDOM.render(app, document.getElementById(`root`));

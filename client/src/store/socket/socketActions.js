@@ -7,7 +7,7 @@ export const SAVE_DATA = `SAVE_DATA`;
 export const GET_ROOM_INFO = `GET_ROOM_INFO`;
 export const JOIN_ROOM = `JOIN_ROOM`;
 
-export const initializeSocket = (socket) => ({
+export const initializeSocket = socket => ({
   type: OPEN_SOCKET,
   payload: { socket },
 });
