@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StylesProvider } from "@material-ui/core/styles";
-import styled from "styled-components";
-import { ToastContainer } from "react-toastify";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StylesProvider } from '@material-ui/core/styles';
+import styled from 'styled-components';
+import { ToastContainer } from 'react-toastify';
 // import { useDispatch, useSelector } from "react-redux";
-import { auth } from "store/user/userSelectors";
-import Content from "./Content/Content";
+import { auth } from 'store/user/userSelectors';
+import Content from './Content/Content';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -41,6 +41,6 @@ App.propTypes = {
 App.defaultProps = {
   modalType: null,
   error: null,
-}
+};
 
 export default App;
