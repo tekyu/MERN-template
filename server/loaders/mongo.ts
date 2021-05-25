@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 import express from 'express';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
-import config from '../config/index';
 import { Db } from 'mongodb';
+import config from '../config/index';
 
 const MongoStoreSession = MongoStore(session);
 
@@ -17,9 +17,9 @@ export default async ({
 }): Promise<Db> => {
   // CONNECTION EVENTS
   // When successfully
-  mongoose.connection.on('connected', function () {
+  mongoose.connection.on('connected', () => {
     logger.info(
-      `✌️ Mongoose default connection open to ${config.db.databaseURL}`
+      `✌️ Mongoose default connection open to ${config.db.databaseURL}`,
     );
   });
   const mongoConnection = await mongoose.connect(config.db.databaseCON, {
@@ -35,7 +35,7 @@ export default async ({
       resave: true,
       saveUninitialized: true,
       secret: config.db.databaseSecret,
-    })
+    }),
   );
 
   return mongoConnection.connection.db;
