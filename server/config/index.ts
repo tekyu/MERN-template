@@ -1,6 +1,7 @@
 import { config } from 'dotenv';
 // const dotenv = require('dotenv');
 // Set the NODE_ENV to 'development' by default
+// @ts-ignore
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const envFound = config();
 if (!envFound) {
