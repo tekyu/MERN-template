@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   position: fixed;
@@ -14,8 +14,6 @@ const StyledContainer = styled.div`
   justify-content: center;
 `;
 
-const FullScreenLoader = () => {
-  return <StyledContainer>Logo</StyledContainer>;
-};
+const FullScreenLoader = () => <StyledContainer>Logo</StyledContainer>;
 
 export default FullScreenLoader;
