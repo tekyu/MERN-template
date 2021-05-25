@@ -60,8 +60,8 @@ Project contains following babel plugins
 - Nodemon
 - Mongoose
 
-```
 .env file
+```
 
 # Port
 PORT = '3010'
