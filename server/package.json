@@ -1,5 +1,5 @@
 {
-  "name": "tournamentmaker-backend",
+  "name": "merntemplatebackend",
   "version": "0.0.1",
   "description": "backend for tournament maker",
   "main": "app.js",
@@ -12,7 +12,7 @@
     "silent-build": "tsc-silent -p tsconfig.json --suppress @"
   },
   "author": "Patryk Rosiak",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/node": "^14.14.10",
     "@types/socket.io": "^2.1.11",

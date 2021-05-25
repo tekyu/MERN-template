@@ -1,7 +1,6 @@
 {
   "name": "merntemplate",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
   "scripts": {
     "start": "cross-env NODE_PATH=src/ react-app-rewired start",
     "build": "cross-env NODE_PATH=src/ react-app-rewired build",
@@ -11,6 +10,8 @@
     "stylelint": "stylelint **/*.css **/*.scss",
     "eject": "react-scripts eject"
   },
+  "author": "Patryk Rosiak",
+  "license": "MIT",
   "eslintConfig": {
     "extends": "react-app"
   },
