@@ -60,7 +60,7 @@ Project contains following babel plugins
 - Nodemon
 - Mongoose
 
-.env file
+Backend .env file
 ```
 
 # Port
