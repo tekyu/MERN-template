@@ -48,6 +48,11 @@ Project contains following babel plugins
 
 **Formatting on save** is used inside project
 
+Frontend .env file
+```
+REACT_APP_SOCKET_ADDRESS = 'http://localhost:3012'
+```
+
 ### Backend
 
 - Node.js
