@@ -24,6 +24,8 @@ module.exports = {
     'no-unused-vars': 1,
     'no-console': 1,
     'import/prefer-default-export': 0,
+    'arrow-parens': ['error', 'as-needed'],
+    'import/no-cycle': 0,
   },
   settings: {
     'import/resolver': {

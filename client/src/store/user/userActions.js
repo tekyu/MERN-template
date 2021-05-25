@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 
 export const UPDATE_PLAYER = 'UPDATE_PLAYER';
 
-export const updatePlayer = (user) => ({
+export const updatePlayer = user => ({
   type: UPDATE_PLAYER,
   payload: user,
 });
@@ -19,5 +19,5 @@ export const createAnonUser = () => {
   );
   const user = userFromLS && userFromLS.id ? userFromLS : { id: nanoid(), anon: true };
   setItemToStorage(USER, user);
-  return (dispatch) => dispatch(updatePlayer(user));
+  return dispatch => dispatch(updatePlayer(user));
 };

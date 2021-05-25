@@ -1,9 +1,9 @@
-import produce from "immer";
-import { UPDATE_PLAYER } from "./userActions";
+import produce from 'immer';
+import { UPDATE_PLAYER } from './userActions';
 
 export const initialState = {
-  username: ``,
-  id: ``,
+  username: '',
+  id: '',
   auth: false,
 };
 
@@ -17,5 +17,5 @@ export const userReducer = produce(
       default:
         return draft;
     }
-  }
+  },
 );

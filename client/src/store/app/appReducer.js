@@ -1,4 +1,4 @@
-import { CLOSE_MODAL, OPEN_MODAL, SHOW_ERROR } from "./appActions";
+import { CLOSE_MODAL, OPEN_MODAL, SHOW_ERROR } from './appActions';
 
 export const initialState = {
   error: null,

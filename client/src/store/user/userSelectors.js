@@ -1,9 +1,9 @@
 import { createSelector } from 'reselect';
 import { initialState } from './userReducer';
 
-const userSelector = (state) => state.user;
+const userSelector = state => state.user;
 
-export const user = createSelector(userSelector, (user) => user);
+export const user = createSelector(userSelector, user => user);
 
 export const auth = createSelector(
   userSelector,
