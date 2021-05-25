@@ -59,3 +59,29 @@ Project contains following babel plugins
 - Passport
 - Nodemon
 - Mongoose
+
+```
+.env file
+
+# Port
+PORT = '3010'
+SOCKET_PORT = '3012'
+
+# Debug
+LOG_LEVEL = 'debug'
+
+# Front domain
+FRONT_DOMAIN = 'http://localhost:3000'
+
+
+# Mongo
+DB_ADDRESS = 'http://localhost:27017';
+DEVDB_CONN = mongodb://localhost:27017/merntemplate 
+DB_SESSION_SECRET = 'templatesecret'
+
+# Socket
+## 5 seconds
+SOCKET_PING_TIMEOUT = 5000
+## 5 minutes
+SOCKET_PING_INTERVAL = 300000
+```
